@@ -3,7 +3,8 @@ function Cart({
   total = 0,
   decreaseQuantity,
   increaseQuantity,
-  removeFromCart
+  removeFromCart,
+  onCheckout
 }) {
   const deliveryCharge = total > 999 ? 0 : 99;
   const grandTotal = total + deliveryCharge;
@@ -69,7 +70,7 @@ function Cart({
               <span>Rs {grandTotal.toLocaleString()}</span>
             </div>
 
-            <button type="button" className="checkout-btn">
+            <button type="button" className="checkout-btn" onClick={onCheckout}>
               Proceed to Checkout
             </button>
           </div>

@@ -1,11 +1,39 @@
-function Header({ cartCount, searchQuery, onSearchChange }) {
+import { useDispatch, useSelector } from "react-redux";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { selectCartCount, selectSearchQuery } from "../store/selectors";
+import { setSearchQuery } from "../store/slices/uiSlice";
+
+function Header() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const cartCount = useSelector(selectCartCount);
+  const searchQuery = useSelector(selectSearchQuery);
+
+  const navigationItems = [
+    { label: "Home", to: "/" },
+    { label: "Products", to: "/products" },
+    { label: "Cart", to: "/cart" },
+    { label: "New Arrivals", to: "/new-arrivals" },
+    { label: "Electronics", to: "/electronics" },
+    { label: "Home & Kitchen", to: "/home-kitchen" },
+    { label: "Workspace", to: "/workspace" },
+    { label: "Deals", to: "/deals" }
+  ];
+
+  const onSearchSubmit = () => {
+    if (location.pathname !== "/products") {
+      navigate("/products");
+    }
+  };
+
   return (
     <header className="top-header">
       <div className="top-header-main">
-        <div className="brand-block" aria-label="Homepage">
+        <Link className="brand-block" to="/" aria-label="Homepage">
           <h1>NORTHLINE</h1>
           <span>STORE</span>
-        </div>
+        </Link>
 
         <div className="delivery-block">
           <p>Delivering globally</p>
@@ -20,10 +48,10 @@ function Header({ cartCount, searchQuery, onSearchChange }) {
             id="search-input"
             type="text"
             value={searchQuery}
-            onChange={(event) => onSearchChange(event.target.value)}
+            onChange={(event) => dispatch(setSearchQuery(event.target.value))}
             placeholder="Search electronics, home, office and more"
           />
-          <button type="button" aria-label="Search products">
+          <button type="button" aria-label="Search products" onClick={onSearchSubmit}>
             Go
           </button>
         </div>
@@ -38,21 +66,22 @@ function Header({ cartCount, searchQuery, onSearchChange }) {
           <strong>Orders</strong>
         </div>
 
-        <div className="cart-pill" aria-label="Cart items">
+        <NavLink className="cart-pill" to="/cart" aria-label="Cart items">
           <strong>{cartCount}</strong>
           <span>Cart</span>
-        </div>
+        </NavLink>
       </div>
 
       <div className="top-header-nav">
-        <p>All Departments</p>
-        <p>New Arrivals</p>
-        <p>Support</p>
-        <p>Electronics</p>
-        <p>Home & Kitchen</p>
-        <p>Workspace</p>
-        <p>Audio</p>
-        <p>Deals</p>
+        {navigationItems.map((item) => (
+          <NavLink
+            key={`${item.label}-${item.to}`}
+            to={item.to}
+            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+          >
+            {item.label}
+          </NavLink>
+        ))}
       </div>
     </header>
   );

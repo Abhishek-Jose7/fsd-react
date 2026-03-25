@@ -1,8 +1,28 @@
-# Getting Started with Create React App
+# Ecommerce App (Routing + Redux)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project has been expanded into a full component-based storefront using:
+
+- React Router for multi-page navigation
+- Redux Toolkit for global state management
+- Reusable components for products, cart, layout, and header
+
+## Implemented Features
+
+- Route-based pages:
+	- `/` Home page
+	- `/products` Product catalog page
+	- `/cart` Cart page
+	- `*` Not Found page
+- Redux slices:
+	- `products` for product data
+	- `cart` for cart operations (add, increase, decrease, remove)
+	- `ui` for search query state
+- Memoized selectors for filtered products, cart count, and subtotal
+- Search input connected to Redux and shared across routed pages
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 

@@ -54,6 +54,8 @@ body {
   display: flex;
   align-items: baseline;
   gap: 6px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .brand-block h1 {
@@ -125,6 +127,8 @@ body {
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   background: #fff;
+  text-decoration: none;
+  color: inherit;
 }
 
 .cart-pill strong {
@@ -140,7 +144,8 @@ body {
   gap: 8px;
 }
 
-.top-header-nav p {
+.top-header-nav .nav-link {
+  display: block;
   text-align: center;
   font-size: 0.76rem;
   font-weight: 600;
@@ -148,6 +153,14 @@ body {
   border-radius: 999px;
   padding: 6px 8px;
   background: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-header-nav .nav-link.active,
+.top-header-nav .nav-link:hover {
+  background: #111;
+  color: #fff;
 }
 
 .marketplace-main {
@@ -200,6 +213,158 @@ body {
 
 .catalog-panel {
   padding: 20px;
+}
+
+.home-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.home-action-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-soft);
+}
+
+.home-action-card h2 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.home-action-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cart-page-title {
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+}
+
+.cart-page-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+
+.not-found {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 32px;
+  text-align: center;
+}
+
+.not-found p {
+  color: var(--muted);
+  margin: 8px 0 16px;
+}
+
+.not-found-link {
+  display: inline-block;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 9px 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.payment-page {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 22px;
+}
+
+.payment-title {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+.payment-empty {
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-align: center;
+}
+
+.payment-link {
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 18px;
+}
+
+.payment-form-card,
+.payment-summary-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 16px;
+}
+
+.payment-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.payment-form label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.payment-form input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+}
+
+.payment-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pay-btn {
+  margin-top: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.payment-summary-card p {
+  margin: 8px 0;
+}
+
+.payment-total {
+  font-weight: 700;
+  font-size: 1.02rem;
 }
 
 .catalog-heading-row {
@@ -462,6 +627,10 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
   .content-grid {
     grid-template-columns: 1fr;
   }
@@ -485,6 +654,10 @@ body {
   }
 
   .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-actions {
     grid-template-columns: 1fr;
   }
 
