@@ -645,16 +645,71 @@ body {
 }
 
 @media (max-width: 760px) {
+  .top-header {
+    position: static;
+  }
+
   .top-header-main {
-    grid-template-columns: 1fr;
+    width: min(1240px, 96vw);
+    padding: 12px 0;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand cart"
+      "search search"
+      "delivery account"
+      "orders orders";
+    align-items: start;
+    gap: 10px;
+  }
+
+  .brand-block {
+    grid-area: brand;
+  }
+
+  .delivery-block {
+    grid-area: delivery;
   }
 
   .search-block {
-    grid-column: span 1;
+    grid-area: search;
+    min-width: 0;
+  }
+
+  .account-block {
+    grid-area: account;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .orders-block {
+    grid-area: orders;
+  }
+
+  .cart-pill {
+    grid-area: cart;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .search-block {
+    grid-column: auto;
+  }
+
+  .search-block input {
+    padding: 10px 12px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-strip {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .hero-title {
+    letter-spacing: 0.1em;
   }
 
   .home-actions {
@@ -662,7 +717,34 @@ body {
   }
 
   .top-header-nav {
+    width: min(1240px, 96vw);
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding-top: 8px;
+  }
+
+  .top-header-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .marketplace-main {
+    width: min(1240px, 96vw);
+    margin: 14px auto 28px;
+  }
+
+  .catalog-panel,
+  .cart-panel,
+  .payment-page,
+  .cart-page-card,
+  .not-found {
+    padding: 14px;
+  }
+
+  .catalog-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .products-grid {
@@ -671,6 +753,54 @@ body {
 }
 
 @media (max-width: 520px) {
+  .brand-block h1 {
+    font-size: 1.15rem;
+  }
+
+  .brand-block span {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  .delivery-block,
+  .account-block,
+  .orders-block {
+    font-size: 0.92rem;
+  }
+
+  .top-header-main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "cart"
+      "search"
+      "delivery"
+      "account"
+      "orders";
+  }
+
+  .account-block {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .cart-pill {
+    justify-self: start;
+  }
+
+  .top-header-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .top-header-nav .nav-link {
+    font-size: 0.82rem;
+    padding: 8px;
+  }
+
+  .payment-row {
+    grid-template-columns: 1fr;
+  }
+
   .products-grid {
     grid-template-columns: 1fr;
   }

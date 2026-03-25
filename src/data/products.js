@@ -9,7 +9,7 @@ const products = [
     rating: 4.4,
     reviews: 2013,
     badge: "Top Pick",
-    image: "https://source.unsplash.com/900x700/?headphones,product"
+    image: "https://picsum.photos/seed/product-headphones/900/700"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const products = [
     rating: 4.2,
     reviews: 1289,
     badge: "Limited Run",
-    image: "https://source.unsplash.com/900x700/?smartwatch,product"
+    image: "https://picsum.photos/seed/product-smartwatch/900/700"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const products = [
     rating: 4.3,
     reviews: 986,
     badge: "Reliable Choice",
-    image: "https://source.unsplash.com/900x700/?security,camera,product"
+    image: "https://picsum.photos/seed/product-security-camera/900/700"
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const products = [
     rating: 4.5,
     reviews: 1742,
     badge: "Staff Choice",
-    image: "https://source.unsplash.com/900x700/?mechanical,keyboard,product"
+    image: "https://picsum.photos/seed/product-keyboard/900/700"
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const products = [
     rating: 4.1,
     reviews: 834,
     badge: "Value Pick",
-    image: "https://source.unsplash.com/900x700/?bluetooth,speaker,product"
+    image: "https://picsum.photos/seed/product-speaker/900/700"
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const products = [
     rating: 4.0,
     reviews: 537,
     badge: "Home Select",
-    image: "https://source.unsplash.com/900x700/?air,purifier,product"
+    image: "https://picsum.photos/seed/product-air-purifier/900/700"
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const products = [
     rating: 4.6,
     reviews: 962,
     badge: "Editor Choice",
-    image: "https://source.unsplash.com/900x700/?office,chair,product"
+    image: "https://picsum.photos/seed/product-office-chair/900/700"
   },
   {
     id: 8,
@@ -93,7 +93,103 @@ const products = [
     rating: 4.2,
     reviews: 712,
     badge: "Kitchen Best",
-    image: "https://source.unsplash.com/900x700/?blender,appliance,product"
+    image: "https://picsum.photos/seed/product-blender/900/700"
+  },
+  {
+    id: 9,
+    name: "4K Ultra HD Smart TV",
+    category: "electronics",
+    brand: "ViewSphere",
+    price: 32999,
+    originalPrice: 48999,
+    rating: 4.5,
+    reviews: 1531,
+    badge: "Cinema Pick",
+    image: "https://picsum.photos/seed/product-smart-tv/900/700"
+  },
+  {
+    id: 10,
+    name: "Robot Vacuum Cleaner",
+    category: "home-kitchen",
+    brand: "AutoSweep",
+    price: 14499,
+    originalPrice: 22999,
+    rating: 4.3,
+    reviews: 968,
+    badge: "Smart Home",
+    image: "https://picsum.photos/seed/product-robot-vacuum/900/700"
+  },
+  {
+    id: 11,
+    name: "USB-C Docking Station",
+    category: "workspace",
+    brand: "PortLine",
+    price: 5499,
+    originalPrice: 7999,
+    rating: 4.2,
+    reviews: 623,
+    badge: "Desk Essential",
+    image: "https://picsum.photos/seed/product-docking-station/900/700"
+  },
+  {
+    id: 12,
+    name: "Professional Tripod Stand",
+    category: "electronics",
+    brand: "FramePro",
+    price: 3199,
+    originalPrice: 4999,
+    rating: 4.1,
+    reviews: 487,
+    badge: "Creator Gear",
+    image: "https://picsum.photos/seed/product-tripod/900/700"
+  },
+  {
+    id: 13,
+    name: "Ceramic Cookware Set (8 Piece)",
+    category: "home-kitchen",
+    brand: "CookNest",
+    price: 6899,
+    originalPrice: 10499,
+    rating: 4.4,
+    reviews: 1392,
+    badge: "Chef Favorite",
+    image: "https://picsum.photos/seed/product-cookware/900/700"
+  },
+  {
+    id: 14,
+    name: "27-inch QHD Monitor",
+    category: "workspace",
+    brand: "PixelForge",
+    price: 16999,
+    originalPrice: 24999,
+    rating: 4.6,
+    reviews: 1116,
+    badge: "Work Pro",
+    image: "https://picsum.photos/seed/product-monitor/900/700"
+  },
+  {
+    id: 15,
+    name: "Wireless Charging Pad",
+    category: "electronics",
+    brand: "VoltNest",
+    price: 1599,
+    originalPrice: 2599,
+    rating: 4.0,
+    reviews: 804,
+    badge: "Everyday Pick",
+    image: "https://picsum.photos/seed/product-wireless-charger/900/700"
+  },
+  {
+    id: 16,
+    name: "Standing Desk Converter",
+    category: "workspace",
+    brand: "LiftDesk",
+    price: 8999,
+    originalPrice: 13999,
+    rating: 4.3,
+    reviews: 552,
+    badge: "Posture Upgrade",
+    image: "https://picsum.photos/seed/product-standing-desk/900/700"
   }
 ];
 
